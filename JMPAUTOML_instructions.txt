@@ -1,0 +1,50 @@
+1.transfer train test files to a folder
+2. open excel file
+3. click JMP on top rigght
+4. then click data table
+6. Open trainig data table
+5. analyze
+6. predictice modeling
+7. make validation column
+8. add property to stratification column
+9.  Press OK
+10. Add random state = 1234
+11. Click Go
+12. Check the training table and see training and validation written on it
+13. Then go to train table and click tables
+14. click concatenate
+15. Then under opened data tables click test set and then click add under data tables to be concatenated
+16. then make sure to provide a name under output table name like ....Joined
+17. click ok
+18. Now you will see a new data table called ...joined. 
+19.under validation column, scroll all the way to the bottom before you see a '.' and change it to 2. 0 means train, 1 means test and 2 means validation
+20. then right click on the 2 and selected fill and fill to the bottom of table
+21. then click analyze, predictive modeling and then press model screening
+22. click and drag Y column to Y area
+23. click and drag X columns to X area
+24. click and drag Validation column to validation area
+25. set random seed as 1234
+26. Under modeling options select "Add two way interactions" and "Add quadratics"
+27. then click ok
+28. Models will now run
+29. Should open a seperate window now with all the model results (test and validation are imp)
+30. Then under details. select best method. click red arrow. then click save columns. then click save column formula. Now if you go to your joined table, you should see the ypredicted also available
+31. Now save the joined table as an excel sheet (For MAPE calc) and as a jmp table for later on comparision.
+
+--------------------
+
+Instructions to get technology r2
+
+1. open the joined jmp file
+2. Click graph, then graph builder
+3. Drag Technology to the Xgroup
+4. Drag predicted CFD to X at bottom
+5. Drag real CFD to Y on left
+6. Click 3rd graph on top (regression)
+7. scroll down under line of fit and select r2 and RMSE
+8. Then go to the data table
+9. on bottom left, right click red arrow, row selection, select where
+10. select validation, less than 2, click OK
+11. Right click on highlighted points, click hide and exclude
+12. save graph builder to data script
+13. to save a copy of the graph, right click on the graph, edit, copy graph, go to ppt and paste. save it
